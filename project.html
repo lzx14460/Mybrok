@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>项目 · 刘卓轩</title>
+    <meta name="description" content="毕业设计：智慧校园体育设施预约与健康管理平台。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function () {
+        var key = "blog-theme";
+        var saved = localStorage.getItem(key);
+        var theme =
+          saved ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="logo" href="index.html">刘卓轩 <span>作品集</span></a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" data-nav="home">首页</a></li>
+          <li><a href="about.html" data-nav="about">关于</a></li>
+          <li><a href="project.html" data-nav="project">项目</a></li>
+        </ul>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单">
+          ☰
+        </button>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换主题">
+          <span class="sun" aria-hidden="true">☀</span>
+          <span class="moon" aria-hidden="true">☾</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <div class="wrap project-layout" id="project-root"></div>
+    </main>
+
+    <!-- 点击截图后的放大预览，由 main.js 控制开关 -->
+    <dialog class="lightbox" id="lightbox" aria-label="放大查看截图">
+      <button class="lightbox-close" type="button" aria-label="关闭">✕</button>
+      <img class="lightbox-img" id="lightbox-img" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© <span id="year"></span> 刘卓轩</span>
+        <a href="https://github.com/lzx14460/my-portfolio" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
